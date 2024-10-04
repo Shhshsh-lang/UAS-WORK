@@ -15,3 +15,11 @@ then i did masking using bgr and i also used median blur for more accuracy
 but I was not able to get the colour range 
 So I asked gunmay bhaiya then he gave me the solution 
 Till now I have just made the grassy area with different colour
+
+4 OCTOBER 2024
+today i made the burnt area with different colour in a different image
+and also merged both the images to get the burnt and non burnt area with different colour on the same image
+then i tried finding the number of triangles 
+for this i refered to youtube and found different methods (i would be going to use method in which cv2.polydp() method is used )
+for this i needed contours but in gray image i was not getting the blue tringlei 
+i tried but am not able to solve it
