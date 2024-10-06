@@ -23,3 +23,21 @@ then i tried finding the number of triangles
 for this i refered to youtube and found different methods (i would be going to use method in which cv2.polydp() method is used )
 for this i needed contours but in gray image i was not getting the blue tringlei 
 i tried but am not able to solve it
+
+5 OCTOBER 2024
+Previously I was converting the original image to gray but this time I converted merged image to gray then I got all the triangles 
+Then I found its contours and then the number of triangles using cv2.approxpolydp()
+(Not asked to do)
+
+Then I my mergerd image the triangles were black but I needed them in colour 
+So first I converted the image using bitwise not so that I get the triangle area as white instead of black then I used bitwise or with the original and the merged image 
+
+
+6th October 
+Today I found the number of red and blue triangles on each region 
+For this I first used the red colour mask to get the red triangles on both region and also for blue triangles 
+But getting blue and red triangles of only a specific region was bit tough so I used the coordinates of the contours of the triangles to do it the i did the rest of calculation 
+Till now  I have completed the work on a single image
+
+
+
