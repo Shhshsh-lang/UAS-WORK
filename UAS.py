@@ -50,7 +50,7 @@ def image1() :
         mask_green=cv2.inRange(blur,l_green,u_green)   # TO FIND ONLY GRASS REGION
         
         # CREATING A BLANK IMAGE OF A SPECIFIC COLOUR
-        color_img=np.zeros((640,640,3))  # THIS CREATES A BLANK IMAGE OF THE GIVEN DIMENSIONS 
+        color_img=np.zeros((640,640,3),dtype=np.uint8)  # THIS CREATES A BLANK IMAGE OF THE GIVEN DIMENSIONS 
         color_img[:]=[0,145,175]     # THIS GIVES THE COLOUR TO THE BLANK IMAGE
 
         grass_=cv2.bitwise_and(color_img,color_img,mask=mask_green)  #USING BITWISE AND OPERATION TO MERGE TWO IMAGES
@@ -1536,21 +1536,21 @@ def image11() :
 
 def findcolour() :
     def pick_color(event,x,y,flags,param):   # TO FIND THE COLOUR OF THE REGION OF THE IMAGE  ON WHICH I CLICK
-        if event == cv2.EVENT_LBUTTONDOWN :
-            bgr_color = img1[y,x]
+        if event == cv2.EVENT_LBUTTONDOWN :   # TO CHECK IF LEFT MOUSE BUTTON IS CLICKED
+            bgr_color = img1[y,x]      # TO DISPLAY THE BGR VALUE AT X,Y
             print(f"BGR color at ({x},{y}):{bgr_color}")
 
     cv2.namedWindow("IMAGE")
-    cv2.setMouseCallback("IMAGE",pick_color)
+    cv2.setMouseCallback("IMAGE",pick_color)   # TO ACCESS pick_color WHENEVER THE MOUSE IS CLICKED
     img1=cv2.imread("11.png")
 
-    cv2.imshow("IMAGE",img1)
+    cv2.imshow("IMAGE",img)
 
     if cv2.waitKey(0)==ord("q") :
         exit()
 
 
-findcolour()
+#findcolour()
 image1 =image1()
 image2= image2()
 image3=image3()
@@ -1562,7 +1562,7 @@ image8=image8()
 image10=image10()
 image11=image11()
 
-list2 = np.array([image1,image2,image3,image4,image5,image6,image7,image8,image10,image11])
+list2 = [image1,image2,image3,image4,image5,image6,image7,image8,image10,image11]
 
 list2.sort(reverse=True)
 print(list2)
