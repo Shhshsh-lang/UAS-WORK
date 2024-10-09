@@ -39,5 +39,6 @@ For this I first used the red colour mask to get the red triangles on both regio
 But getting blue and red triangles of only a specific region was bit tough so I used the coordinates of the contours of the triangles to do it the i did the rest of calculation 
 Till now  I have completed the work on a single image
 
-
+7th October
+today i applied the same code on all the test images since i used the coordinates to differnciate between the grassy and burnt area so i had to do this 
 
