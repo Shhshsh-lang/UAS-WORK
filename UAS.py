@@ -26,7 +26,7 @@ def image1() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
@@ -36,6 +36,7 @@ def image1() :
         cv2.imshow("FINAL1",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -177,7 +178,7 @@ def image2() :
         print(houses)  
 
         print(priority)
-
+       
         print(Pr)
 
 
@@ -187,6 +188,8 @@ def image2() :
         cv2.imshow("FINAL2",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -328,7 +331,7 @@ def image3() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
@@ -338,6 +341,8 @@ def image3() :
         cv2.imshow("FINAL3",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -479,7 +484,7 @@ def image4() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
@@ -489,6 +494,7 @@ def image4() :
         cv2.imshow("FINAL4",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -630,16 +636,18 @@ def image5() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
         merge= cv2.bitwise_or(A,B)  # GETTING THE IMAGE WITH DIFFERNRT COLOURS FOR DIFFERENT REGIONS
-        cv2.imshow("MERGE5",merge) 
+        # cv2.imshow("MERGE5",merge) 
         final=cv2.bitwise_or(merge,img)
         cv2.imshow("FINAL5",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+    
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
         blur=cv2.medianBlur(img,9) # DID MEDIAN BLUR TO SMOTHEN TH EDGES AND TO REDUCE THE NOISE
@@ -780,16 +788,18 @@ def image6() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
         merge= cv2.bitwise_or(A,B)  # GETTING THE IMAGE WITH DIFFERNRT COLOURS FOR DIFFERENT REGIONS
-        cv2.imshow("MERGE6",merge) 
+        # cv2.imshow("MERGE6",merge) 
         final=cv2.bitwise_or(merge,img)
         cv2.imshow("FINAL6",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -931,16 +941,18 @@ def image7() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
         merge= cv2.bitwise_or(A,B)  # GETTING THE IMAGE WITH DIFFERNRT COLOURS FOR DIFFERENT REGIONS
-        cv2.imshow("MERGE7",merge) 
+        # cv2.imshow("MERGE7",merge) 
         final=cv2.bitwise_or(merge,img)
         cv2.imshow("FINAL7",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+    
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
         blur=cv2.medianBlur(img,9) # DID MEDIAN BLUR TO SMOTHEN TH EDGES AND TO REDUCE THE NOISE
@@ -1081,7 +1093,7 @@ def image8() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
@@ -1091,6 +1103,8 @@ def image8() :
         cv2.imshow("FINAL8",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -1234,16 +1248,18 @@ def image10() :
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
         merge= cv2.bitwise_or(A,B)  # GETTING THE IMAGE WITH DIFFERNRT COLOURS FOR DIFFERENT REGIONS
-        # cv2.imshow("MERGE8",merge) 
+        # cv2.imshow("MERGE10",merge) 
         final=cv2.bitwise_or(merge,img)
-        cv2.imshow("FINAL8",final)
+        cv2.imshow("FINAL10",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
+
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -1362,7 +1378,6 @@ def image10() :
 
 
     image()
-
 def image11() :
     def image() :  
         
@@ -1384,11 +1399,11 @@ def image11() :
         priority = [Pb,Pg]  # TO GET A LIST WITH PRIORITY 
 
         Pr= Pb/Pg  # TO GET THE RESCUE RATIO
-
+        
         print(houses)  
 
         print(priority)
-
+        
         print(Pr)
 
 
@@ -1398,6 +1413,7 @@ def image11() :
         cv2.imshow("FINAL11",final)
         if cv2.waitKey(0)==ord("q") :
             exit()
+        return priority
 
     def grass(img) :  # FOR CHANGING THE COLOUR OF NON BURNT REGION
 
@@ -1535,13 +1551,16 @@ def findcolour() :
 
 
 findcolour()
-#image1()
-#image2()
-#image3()
-#image4()
-#image5()
-#image6()
-#image7()
-#image8()
-#image10()
+image1()
+image2()
+image3()
+image4()
+image5()
+image6()
+image7()
+image8()
+image10()
 image11()
+
+
+
