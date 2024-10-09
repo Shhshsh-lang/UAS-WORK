@@ -50,7 +50,7 @@ def image1() :
         mask_green=cv2.inRange(blur,l_green,u_green)   # TO FIND ONLY GRASS REGION
         
         # CREATING A BLANK IMAGE OF A SPECIFIC COLOUR
-        color_img=np.zeros((640,640,3),dtype=np.uint8)  # THIS CREATES A BLANK IMAGE OF THE GIVEN DIMENSIONS 
+        color_img=np.zeros((640,640,3))  # THIS CREATES A BLANK IMAGE OF THE GIVEN DIMENSIONS 
         color_img[:]=[0,145,175]     # THIS GIVES THE COLOUR TO THE BLANK IMAGE
 
         grass_=cv2.bitwise_and(color_img,color_img,mask=mask_green)  #USING BITWISE AND OPERATION TO MERGE TWO IMAGES
@@ -1399,7 +1399,7 @@ def image11() :
         priority = [Pb,Pg]  # TO GET A LIST WITH PRIORITY 
 
         Pr= Pb/Pg  # TO GET THE RESCUE RATIO
-        
+        print(type(Pr))
         print(houses)  
 
         print(priority)
@@ -1551,16 +1551,19 @@ def findcolour() :
 
 
 findcolour()
-image1()
-image2()
-image3()
-image4()
-image5()
-image6()
-image7()
-image8()
-image10()
-image11()
+image1 =image1()
+image2= image2()
+image3=image3()
+image4=image4()
+image5=image5()
+image6=image6()
+image7=image7()
+image8=image8()
+image10=image10()
+image11=image11()
 
+list2 = np.array([image1,image2,image3,image4,image5,image6,image7,image8,image10,image11])
 
+list2.sort(reverse=True)
+print(list2)
 
